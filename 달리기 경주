@@ -1,3 +1,5 @@
+<!--여기서 객체쓰는법 배워서 뒷문제에서는 그부분은 따로참고안하고 문제품 아직도 오답이 어떤경우의수 때문에 안되는지는 모르겠음 
+객체사용안하면 당연히 splice 써서 푸는건줄알았는데 객체사용하니까 객체 index값으로 이런게 가능하구나~ 알게됨 이문제가 좀오래걸리고 위에 객체부분 알고서 뒷문제는 비교적 금방품-->
 <!--1차-->
   function solution(players, callings) {
   var playerMap = {};
@@ -28,6 +30,18 @@
         [players[idx-1],players[idx]]=[players[idx],players[idx-1]];
         playerMap[callings[i]]=idx-1;
         playerMap[play]=idx;
+    }
+    return players
+}
+
+<!--오답-->
+function solution(players, callings) {
+    for ( let i =0; i<callings.length; i++){
+        for (let j = 0; j<players.length; j++){
+        if (callings[i] === players[j]){
+            players.splice(j,1);
+            players.splice(j-1,0,callings[i]);}
+        }
     }
     return players
 }
