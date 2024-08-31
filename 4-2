@@ -1,0 +1,24 @@
+const fs = require('fs');
+let input = fs.readFileSync('./input.txt').toString().trim();
+
+let n = Number(input);
+
+function solution(n) {
+  // 변수 count =  0 설정
+  let count = 0;
+  // 3번의 반복문으로 시간:분:초 설정 이때 n시까지 임으로 시간(i) 의 최갯값은 i <= n
+    for (let i = 0; i <= n; i++){
+      for (let k = 0; k <= 59 ; k++){
+        for (let j = 0; j <= 59; j++){
+  //서로 더해지지않게 각 i, j, k 를 문자열로 만든뒤 합침
+        let time = i.toString()+j.toString()+k.toString() ;
+        // includes(3) 함수사용 3이 들어있을 시 true 없으면 false 반환 true 일때 count +=1 
+          if (time.includes('3')) count += 1 ;
+        }
+      }
+    }
+
+  return count;
+}
+
+console.log(solution(n));
