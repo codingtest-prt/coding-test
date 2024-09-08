@@ -1,6 +1,7 @@
 // 내가 푼것
 function solution1 (Number) {
   // 주어진 숫자를 각각 0과 1을 기준으로 split
+  //filter(Boolean) => 공백제거
   let arr0 = Number.split(0).filter(Boolean);
   let arr1 = Number.split(1).filter(Boolean);
   // 각 0과 1을 기준으로 자른 배열의 길이 비교후 길이가 작은 배열의 길이를 출력
