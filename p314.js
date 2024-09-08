@@ -1,4 +1,4 @@
-/*
+
 function solution1 (arr){
   // 빈배열 지정
   let sum = [];
@@ -24,7 +24,7 @@ function solution1 (arr){
 }
 
 solution1([3, 2, 1, 1, 9])
-*/
+
 //남이 푼것 11 이런 시발 헛고생했네 뭐임이거;;
 
 const solution2 = (n, arr) => {
