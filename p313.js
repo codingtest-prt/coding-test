@@ -5,7 +5,7 @@ function solution1 (Number) {
   let arr1 = Number.split(1).filter(Boolean);
   // 각 0과 1을 기준으로 자른 배열의 길이 비교후 길이가 작은 배열의 길이를 출력
   const answer = arr0.length > arr1.length ? arr1.length : arr0.length
-  console.log(arr0)
+  console.log(answer)
 }
 
 solution1('0001100')
